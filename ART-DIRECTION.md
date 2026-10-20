@@ -18,3 +18,6 @@ Game environment asset, one lush realistic temperate broadleaf tree canopy crown
 
 ## PIP character adaptation
 The existing original `pips-hidden-town-studio-test/assets/pip-poses.png` was inspected as identity reference. The runner is a code-native WebGL mesh adaptation (not a new raster generation): orange fox ears and cream muzzle, teal coat, terracotta scarf, satchel, a single striped sock, cream-tipped curled tail and brass magnifier loop. No new image generation was used for this update.
+
+## Endless PIP detail pass —2026-10-20
+No new raster generation: code-native WebGL smooth tapered limbs; deterministic small fur tufts on orange head and cream muzzle, fuller layered tail with shorter fine tufts; tailored collar and embroidered back seams. Shape and colors stay attached during movement. Low-power mode reduces tuft count to38%. Existing original PIP reference and generated environment textures retained.

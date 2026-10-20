@@ -1,42 +1,26 @@
-# そらいろ遺跡ラン — 太陽石の道 / Sky Ruins Expedition01
+# そらいろ遺跡ラン — PIP Endless / Sky Ruins Endless
 
-既存版を残して制作した、1コース900mの独立テスト版です。既存の無限ラン版と他9作品は変更していません。記録は専用キーsky_ruins_expedition_v1で保存し、既存版の記録を上書きしません。
+900mゴール版をバックアップし、同じ独立テスト環境をエンドレス仕様に更新しました。既存の正式版・他9作品は変更していません。公開URL: https://kazumoriasahi-wq.github.io/sky-ruins-expedition-test/?lang=ja&v=endless3
 
 ## 遊び方
+左右スワイプでレーン移動、上でジャンプ、下ですべります。指を離さず連続スワイプが可能。画面下のボタン、矢印キー、WASDも利用できます。木箱・穴はジャンプ、低い門はスライド、大岩は左右へ回避。3回の被弾で終了し、最高距離とコインを保存します。
 
-左右スワイプで移動、上でジャンプ、下ですべります。指を離さず連続して左右移動できます。下のボタン、矢印キー、WASDも使えます。木箱と穴を跳び、低い石門をくぐり、岩をよけます。すべての障害物には安全なレーンがあります。
+## 終わりのない難易度
+150mごとにレベル上昇。レベルの上限はなく、速度が上がり、障害物間隔が狭まり、組み合わせ・安全レーンの切り替えも難しくなります。操作不能になる無限加速を避け、速度は36m/s、間隔は26mへ徐々に近づきます。高レベルでは変化は小さくなります。すべての障害物列に安全なレーンを残します。
 
-空の庭→滝の橋→夕日の神殿の900mを進みます。遺物は205m・480m・755m付近。ゴールで星1つ、コイン30枚で追加の星、遺物3つでさらに星。星・遺物・クリア回数とコイン、最高記録を保存します。同じコース配置で再挑戦できる固定シードです。新しいコースは今後の追加対象です。
+空の庭・滝の橋・夕日の神殿が300mごとに循環。遺物は各900m周期の205・480・755m付近に繰り返し出現し、ラン中の収集数を表示します。バーはゴール到達率ではなく次のレベルまでの進行を示します。旧版の星・クリア回数は保存データの互換性のため保持し、新版の画面には表示しません。最高距離と所持コインは引き継ぎます。
 
-## 今回の変更
+## キャラクターと画面
+オリジナルのPIPの特徴を維持した3Dモデル。オレンジの毛、クリームの頬・尾先、青緑のコート、赤茶のマフラー、革鞄、片足のしま模様、虫眼鏡を再現。頭・尾の細かな毛束、丸みのある手足、衣服の縫い目・襟を追加しました。写実写真ではなく、細部を増やしたスタイライズ3D表現です。軽量モードでは毛束数を減らします。
 
-- 終わりのあるコース、遺物探し、星評価、クリア後の記録。
-- 石畳・曲線の石門・峡谷・川・滝・遠景、画像素材を使った樹木と石材、自然な雲。
-- 丸みのある冒険家、帽子、リュック、スカーフ、速度に応じた腕・脚の走行モーション。
-- ジャンプ着地直前の入力バッファ、連続スワイプ、英日UI、落ち着いた高コントラストの画面、新しい冒険BGM。
-- 景観を13m単位でGPUに保持し、通常フレームのCPU再生成を減らしました。軽量モードと動きを抑える設定にも対応。
+スマホの大きなプレイ領域とコース外通知欄を継続。音楽・効果音、日英表示、ジャンプ入力バッファ、一時停止・再開、ホスト音声制御を維持します。
 
-## 起動・検証
+## 検証と起動
+追加パッケージ不要。node serve.cjs で http://127.0.0.1:4206/ を開きます。node expedition-tests.cjs / node host-tests.cjs / node music-tests.cjs / node render-tests.cjs。
+QA専用HTMLやsetupスクリプトは配布物に含めません。25シードの10km走行、900m・15000m境界のローカルUI、390px幅、ゲームオーバーを確認。詳細はTEST-RESULTS.md。新版の実機iPhone確認は未実施です。
 
-追加パッケージ不要。node serve.cjs → http://127.0.0.1:4206/?lang=ja
-
-node expedition-tests.cjs
-node host-tests.cjs
-node music-tests.cjs
-node render-tests.cjs
-
-expedition-lab.html、responsive-lab.html、win-lab.htmlはローカル検証専用で配布物・公開リポジトリに含めません。旧無限ラン用のテストやドキュメントはこのテスト版の検証対象ではありません。
-
-## iPhoneでの確認
-
-SafariでURLを開き、開始ボタンを押します。左右・ジャンプ・スライド、連続スワイプ、一時停止と再開、音の切替、Safariを離れた後の復帰を確認してください。小さい端末では軽量モードもお試しください。900mを踏破後、再読込して最高記録と星が残るか確認します。iPhone実機での最終検証は所有者による確認待ちです。
+## 保存とバックアップ
+専用キーsky_ruins_expedition_v1。更新前はSKY-RUINS-before-endless-PIP.zip。別の正式版の記録には触れません。
 
 ## YouTube Playables
-
-既存のライフサイクル・ホスト音声・クラウド保存・整数の最高距離送信を維持し、新しい星・遺物・クリア回数を保存形式に追加しました。模擬SDKのテストに合格。新しい版は公式環境でのテスト・認証・公開承認を受けていません。現行の申請URL・フォームは更新しません。
-
-制作素材とプロンプトはART-DIRECTION.md、検証はTEST-RESULTS.mdを参照。更新前バックアップは作業フォルダーのSKY-RUINS-before-expedition-20261020.zipです。
-
-
-## PIP update (2026-10-20)
-Player replaced by a code-native 3D adaptation of the original PIP mascot: orange fox, teal coat, terracotta scarf, satchel, one striped sock and magnifier-loop tail. Chase-view running/jumping/sliding animation retained. Portrait playfield uses the available viewport width and remaining height; level and reward notices occupy a reserved strip outside the course. Backup: SKY-RUINS-EXPEDITION-before-PIP.zip.
+既存SDK連携と最高距離の整数送信を維持。模擬SDKテストに合格。新しい版の公式環境認証・公開承認は未取得。申請フォームは今回更新していません。
