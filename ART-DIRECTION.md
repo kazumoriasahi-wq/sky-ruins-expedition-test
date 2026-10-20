@@ -14,3 +14,7 @@ Source: assets/foliage-source.png. Runtime: foliage.png (1024 square, alpha pres
 
 Game environment asset, one lush realistic temperate broadleaf tree canopy crown with several natural woody branches underneath, isolated on a TRUE transparent background. Detailed individual small oak-like leaves in restrained olive and forest green, sunlit pale sage tips, dimensional foliage clusters with many irregular gaps and fine branching silhouette. Wide rounded asymmetric crown, no trunk below canopy, no ground, no sky, no border, no text. Soft neutral daylight, realistic hand-painted PBR-inspired game texture, not cartoon and not low-poly. Full crown entirely inside square1024x1024 frame with generous transparent margin. Intended as an alpha-cutout foliage billboard texture for an original exploration game.
 
+
+
+## PIP character adaptation
+The existing original `pips-hidden-town-studio-test/assets/pip-poses.png` was inspected as identity reference. The runner is a code-native WebGL mesh adaptation (not a new raster generation): orange fox ears and cream muzzle, teal coat, terracotta scarf, satchel, a single striped sock, cream-tipped curled tail and brass magnifier loop. No new image generation was used for this update.

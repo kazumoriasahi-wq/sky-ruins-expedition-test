@@ -36,3 +36,7 @@ SafariでURLを開き、開始ボタンを押します。左右・ジャンプ�
 既存のライフサイクル・ホスト音声・クラウド保存・整数の最高距離送信を維持し、新しい星・遺物・クリア回数を保存形式に追加しました。模擬SDKのテストに合格。新しい版は公式環境でのテスト・認証・公開承認を受けていません。現行の申請URL・フォームは更新しません。
 
 制作素材とプロンプトはART-DIRECTION.md、検証はTEST-RESULTS.mdを参照。更新前バックアップは作業フォルダーのSKY-RUINS-before-expedition-20261020.zipです。
+
+
+## PIP update (2026-10-20)
+Player replaced by a code-native 3D adaptation of the original PIP mascot: orange fox, teal coat, terracotta scarf, satchel, one striped sock and magnifier-loop tail. Chase-view running/jumping/sliding animation retained. Portrait playfield uses the available viewport width and remaining height; level and reward notices occupy a reserved strip outside the course. Backup: SKY-RUINS-EXPEDITION-before-PIP.zip.

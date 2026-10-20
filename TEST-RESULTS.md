@@ -25,3 +25,11 @@ Physical iPhone Safari GPU performance, actual touch chaining feel, audible musi
 ## Scope and packaging
 
 Independent repository sky-ruins-expedition-test, browser key sky_ruins_expedition_v1. Existing sky-ruins-run-3d-test and all other games are unchanged. Runtime distribution excludes local QA fixtures, old endless-mode tests and source PNGs. Includes only production files, two optimized original image assets and useful documentation/tests.
+
+## PIP / playfield update (2026-10-20)
+- Original PIP reference inspected; code-native animated 3D fox replaces explorer. 2D fallback silhouette also updated.
+- Engine100-seed course and4 projection checks passed after model changes.
+- Desktop local WebGL start/resume and paused rendering inspected; no captured game errors.
+- Actual390×844 iframe: stage374×598.92px;320×740 iframe: stage304×494.92px. No horizontal overflow.320px start/left/jump/pause controls worked.
+- Local149m fixture crossed150m: visible SPEED UP · LV2 notice was in reserved strip, bottom37px; course top42px. No overlap. QA-only fixtures excluded from publication.
+- Iframe tab captured a MutationObserver observe(Node) error with no source URL; game source contains no MutationObserver. Direct public smoke check remains the authority for deployed runtime. Physical iPhone verification is pending.
