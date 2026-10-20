@@ -11,3 +11,12 @@
 - Current public smoke check and deployment identifiers are recorded separately in the release record.
 
 Previous900m completion/star checks apply only to the backed-up edition.
+
+## Playables integration update — 2026-10-21
+- SDK v1 loaded before runtime scripts. Host-only cloud save/load; normal browser retains its independent key.
+- Latest-best score queue drains after an in-flight score request. Paused health warnings wait for resume; texture upload also waits for host resume.
+- Host audio and language are authoritative; user mute controls are hidden in hosted mode. Game loop, interactions and music pause on SDK callbacks.
+-14 host tests,4 audio tests,4 projection tests and25 seeded10km course checks passed.
+- Mock SDK:129m/850 rendered callbacks stayed unchanged across separate paused observations; audio context count0 while paused/muted; host English and load-failure/retry verified.
+- Official-guide CSP response header: local WebGL start/jump/pause without captured errors.
+- Official suite uses the deployed URL; final result and screenshot are recorded in PLAYABLES-RESULTS.md / release record. Passing the test suite is not YouTube publication approval.

@@ -1,6 +1,6 @@
 # そらいろ遺跡ラン — PIP Endless / Sky Ruins Endless
 
-900mゴール版をバックアップし、同じ独立テスト環境をエンドレス仕様に更新しました。既存の正式版・他9作品は変更していません。公開URL: https://kazumoriasahi-wq.github.io/sky-ruins-expedition-test/?lang=ja&v=endless3
+900mゴール版をバックアップし、同じ独立テスト環境をエンドレス仕様に更新しました。既存の正式版・他9作品は変更していません。公開URL: https://kazumoriasahi-wq.github.io/sky-ruins-expedition-test/?lang=ja&v=playables4
 
 ## 遊び方
 左右スワイプでレーン移動、上でジャンプ、下ですべります。指を離さず連続スワイプが可能。画面下のボタン、矢印キー、WASDも利用できます。木箱・穴はジャンプ、低い門はスライド、大岩は左右へ回避。3回の被弾で終了し、最高距離とコインを保存します。
@@ -17,10 +17,13 @@
 
 ## 検証と起動
 追加パッケージ不要。node serve.cjs で http://127.0.0.1:4206/ を開きます。node expedition-tests.cjs / node host-tests.cjs / node music-tests.cjs / node render-tests.cjs。
-QA専用HTMLやsetupスクリプトは配布物に含めません。25シードの10km走行、900m・15000m境界のローカルUI、390px幅、ゲームオーバーを確認。詳細はTEST-RESULTS.md。新版の実機iPhone確認は未実施です。
+QA専用HTMLやsetupスクリプトは配布物に含めません。25シードの10km走行、900m・15000m境界のローカルUI、390px幅、ゲームオーバーを確認。詳細はTEST-RESULTS.md。エンドレス版は所有者がiPhoneで動作確認済みです。今回のSDK連携はホスト環境で別途確認します。
 
 ## 保存とバックアップ
 専用キーsky_ruins_expedition_v1。更新前はSKY-RUINS-before-endless-PIP.zip。別の正式版の記録には触れません。
 
 ## YouTube Playables
 既存SDK連携と最高距離の整数送信を維持。模擬SDKテストに合格。新しい版の公式環境認証・公開承認は未取得。申請フォームは今回更新していません。
+
+## Playables update —2026-10-21
+SDK v1 integration reinforced for serialized best-distance score updates, pause-safe texture uploads and deferred health warnings.14 adapter checks pass. A runtime-only upload ZIP is prepared separately; SDK simulation fixtures and local test pages are excluded. Existing public games and the application form remain unchanged. Official suite checks and remaining approval steps: PLAYABLES-RESULTS.md.
